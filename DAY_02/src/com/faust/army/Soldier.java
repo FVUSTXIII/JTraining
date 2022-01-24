@@ -2,6 +2,11 @@ package com.faust.army;
 import java.util.Random;
 public class Soldier {
     private String rank;
+    private final static String[] ranks = {"PVT", "PV2", "PFC", "SPC", "CPL", "SGT", "SSG", "SFC", "MSG", "1SG", "SGM", "CSM",
+            "SMA", "WO1", "CW2", "CW3", "CW4", "CW5", "2LT", "1LT", "CPT", "MAJ", "LTC", "COL", "BG", "MG", "LTG", "GEN",
+            "GA"};
+    private final static String[] first_names = {"David", "Faust", "Neil", "Roderick", "Jhon", "Sabin", "Gerardo", "Thomas", "Ryan", "William"};
+    private final static String[] last_names = {"Rodriguez", "Johnson", "Davis", "Stewart", "Heinrich", "Ramirez", "Volkov"};
     private String first_name;
     private String last_name;
     private int position;
@@ -9,13 +14,11 @@ public class Soldier {
 
     public Soldier(int position) {
         Random rand = new Random();
-        String[] ranks = {"PVT", "PV2", "PFC", "SPC", "CPL", "SGT", "SSG", "SFC", "MSG", "1SG", "SGM", "CSM",
-                "SMA", "WO1", "CW2", "CW3", "CW4", "CW5", "2LT", "1LT", "CPT", "MAJ", "LTC", "COL", "BG", "MG", "LTG", "GEN",
-                "GA"};
+
         this.rank = ranks[rand.nextInt(ranks.length)];
-        String[] first_names = {"David", "Faust", "Neil", "Roderick", "Jhon", "Sabin", "Gerardo", "Thomas", "Ryan", "William"};
+
         this.first_name = first_names[rand.nextInt(first_names.length)];
-        String[] last_names = {"Rodriguez", "Johnson", "Davis", "Stewart", "Heinrich", "Ramirez", "Volkov"};
+
         this.last_name = last_names[rand.nextInt(last_names.length)];
         this.position = position;
     }

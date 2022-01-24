@@ -23,7 +23,7 @@ public class CircleOfDeath {
     public void simulateCollectiveSuicide(int position) {
         int i = 0;
         Soldier sword_holder = getSoldier(position);
-        System.out.println("Hello, " + sword_holder.getRank() + " " + sword_holder.getLast_name());
+        System.out.println("Hello, " + sword_holder.getRank() + ". " + sword_holder.getLast_name());
         while (sword_holder.getNext_soldier() != sword_holder) {
             if (i%2 == 0) {
                 DeleteNext(sword_holder);
@@ -33,7 +33,7 @@ public class CircleOfDeath {
             i++;
             survivors--;
         }
-        System.out.println("If you want to survive you might want to swap places with: \n Rank: " + sword_holder.getRank()
+        System.out.println("If you want to survive you might want to swap places with: \nRank: " + sword_holder.getRank()
                 + "\nName: " + sword_holder.getFirst_name() + " " + sword_holder.getLast_name()
                 + "\nPosition: " + sword_holder.getPosition());
     }

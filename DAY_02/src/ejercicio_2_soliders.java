@@ -3,7 +3,7 @@ import com.faust.army.CircleOfDeath;
 import java.util.Scanner;
 
 public class ejercicio_2_soliders {
-    public static void ex(String[] args) {
+    public static void main(String[] args) {
         System.out.println("How big is your army?");
         Scanner input_scanner = new Scanner(System.in);
         int army_size = input_scanner.nextInt();
